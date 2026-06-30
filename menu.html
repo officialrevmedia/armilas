@@ -6,8 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>Menu | Armila's Afghan Restaurant Hamilton — Kababs, Mantu, Matchas</title>
-<meta name="description" content="Full menu at Armila's in Hamilton: Royal Qabli Palaw, lamb chops, mantu, mixed grill, mocktails, matchas, and more. 100% halal. Over 1,000 five-star reviews. Open late.">
-<meta name="keywords" content="Armila's menu, Afghan menu Hamilton, halal menu Hamilton, Royal Qabli Palaw, mantu, mixed grill platter, lamb chops Hamilton, Afghan kababs, matcha Hamilton, mojito Hamilton, Hamilton restaurant menu">
+<meta name="description" content="Full menu at Armila's in Hamilton: the new Nihari Tacos, Royal Qabli Palaw, lamb chops, mantu, mixed grill, mocktails, matchas, and more. 100% halal. Over 1,000 five-star reviews. Open late.">
+<meta name="keywords" content="Armila's menu, Afghan menu Hamilton, halal menu Hamilton, Nihari Tacos Hamilton, Nihari Tacos, Royal Qabli Palaw, mantu, mixed grill platter, lamb chops Hamilton, Afghan kababs, matcha Hamilton, mojito Hamilton, Hamilton restaurant menu">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://armilaslounge.com/menu.html">
 
@@ -34,11 +34,11 @@
 <meta name="twitter:description" content="Afghan kababs, Royal Qabli Palaw, mantu, mocktails, matchas, and more.">
 <meta name="twitter:image" content="https://armilaslounge.com/assets/og-image.jpg">
 
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-<link rel="mask-icon" href="safari-pinned-tab.svg" color="#4D5340">
+<link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#4D5340">
 <link rel="manifest" href="manifest.webmanifest">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -110,6 +110,7 @@
       "hasMenuItem": [
         { "@type": "MenuItem", "name": "Chicken Karahi", "description": "Traditional Pakistani-style dish with tomatoes, yogurt, and fresh spices.", "offers": { "@type": "Offer", "price": "22.00", "priceCurrency": "CAD" } },
         { "@type": "MenuItem", "name": "Nihari", "description": "Slow-cooked veal shank in rich, velvety gravy with caramelized onions. Served with naan or rice.", "offers": { "@type": "Offer", "price": "23.00", "priceCurrency": "CAD" } },
+        { "@type": "MenuItem", "name": "Nihari Tacos", "description": "Our newest fusion dish: bold, slow-cooked nihari and melted cheese folded into a crisp golden shell, finished with fresh herbs and served with a signature dip.", "offers": { "@type": "Offer", "price": "18.00", "priceCurrency": "CAD" } },
         { "@type": "MenuItem", "name": "Fatoush Salad", "description": "Romaine, cucumbers, tomatoes, pita chips in sumac-pomegranate vinaigrette.", "suitableForDiet": "https://schema.org/VegetarianDiet", "offers": { "@type": "Offer", "price": "11.00", "priceCurrency": "CAD" } }
       ]
     },
@@ -276,7 +277,7 @@ button { font-family: inherit; }
 .featured { padding: 100px 40px 60px; background: var(--cream); }
 .featured-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 1fr; gap: 80px; align-items: center; }
 .featured-img { aspect-ratio: 5/4; overflow: hidden; position: relative; }
-.featured-img img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.1); }
+.featured-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(1.1); }
 .featured-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(31,32,23,0.4) 100%); }
 .featured-tag { position: absolute; top: 24px; left: 24px; background: var(--terracotta); color: var(--cream); padding: 8px 14px; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 500; z-index: 2; }
 .featured-content .eyebrow { display: block; margin-bottom: 24px; }
@@ -379,8 +380,8 @@ button { font-family: inherit; }
   body { padding-bottom: 64px; }
   .footer { padding: 56px 20px 90px; }}
 
-.section-visual { width: 100%; aspect-ratio: 3/1.1; overflow: hidden; position: relative; margin: 0 auto 0; max-width: 1600px; }
-.section-visual img { width: 100%; height: 100%; object-fit: cover; filter: saturate(1.08); }
+.section-visual { width: 100%; max-width: 1040px; aspect-ratio: 3/2; overflow: hidden; position: relative; margin: 0 auto; }
+.section-visual img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(1.08); }
 .section-visual::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(31,32,23,0.5) 100%); }
 .section-visual-label { position: absolute; bottom: 24px; left: 32px; color: var(--cream); font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2.5vw, 32px); z-index: 2; letter-spacing: -0.01em; }
 .section-visual-label::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--saffron); margin-right: 16px; vertical-align: middle; }
@@ -390,10 +391,27 @@ button { font-family: inherit; }
 .matcha-feature-img { max-width: 720px; width: 100%; overflow: hidden; box-shadow: 0 24px 60px rgba(31,27,20,0.18); }
 .matcha-feature-img img { width: 100%; height: auto; display: block; }
 
+/* Nihari Tacos — new item feature (portrait photo, shown in full) */
+.menu-newitem { background: var(--cream-warm); padding: 72px 40px; }
+.menu-newitem-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 0.86fr 1.14fr; gap: 60px; align-items: center; }
+.menu-newitem-img { aspect-ratio: 4/5; overflow: hidden; position: relative; box-shadow: 0 24px 56px rgba(31,27,20,0.2); }
+.menu-newitem-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(1.08); }
+.menu-newitem-tag { position: absolute; top: 18px; left: 18px; background: var(--saffron); color: var(--olive-shadow); padding: 8px 14px; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; z-index: 2; }
+.menu-newitem-content .eyebrow { display: block; margin-bottom: 18px; }
+.menu-newitem-content h2 { font-family: var(--serif); font-size: clamp(36px, 5vw, 62px); font-weight: 300; color: var(--olive-shadow); margin-bottom: 18px; line-height: 1.02; letter-spacing: -0.02em; }
+.menu-newitem-content h2 em { color: var(--terracotta); font-style: italic; font-weight: 300; }
+.menu-newitem-content p { font-size: 15.5px; line-height: 1.7; color: var(--walnut); margin-bottom: 18px; }
+.menu-newitem-price { font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--terracotta); font-weight: 500; margin-bottom: 22px; }
+.menu-newitem-meta { display: flex; gap: 10px; flex-wrap: wrap; }
+.menu-newitem-meta span { font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--olive-deep); border: 1px solid rgba(77,83,64,0.3); padding: 7px 13px; font-weight: 500; }
+
 @media (max-width: 768px) {
-  .section-visual { aspect-ratio: 3/1.4; }
+  .section-visual { aspect-ratio: 4/3; }
   .section-visual-label { bottom: 16px; left: 20px; }
   .matcha-feature { padding: 40px 20px 20px; }
+  .menu-newitem { padding: 48px 20px; }
+  .menu-newitem-inner { grid-template-columns: 1fr; gap: 32px; }
+  .menu-newitem-img { max-width: 440px; margin: 0 auto; width: 100%; }
 }
 
 </style>
@@ -403,9 +421,9 @@ button { font-family: inherit; }
 <!-- PROMO BAR -->
 <div class="promo-bar" id="promoBar">
   <div class="promo-content">
-    <span><strong>Online ordering coming soon</strong> — save 10% on your first order</span>
+    <span><strong>The 2026 World Cup is live at Armila's</strong> — every match on one of Hamilton's biggest screens</span>
     <span class="dot">◆</span>
-    <a href="https://www.ubereats.com/ca/store/armilas-restaurant/07x0-J-CTT-2ft-CLM0nZA" target="_blank" rel="noopener">Order on Uber Eats →</a>
+    <a href="index.html#worldcup">See the Schedule →</a>
   </div>
   <button class="close" onclick="document.getElementById('promoBar').classList.add('hidden')" aria-label="Close">✕</button>
 </div>
@@ -419,13 +437,14 @@ button { font-family: inherit; }
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <img src="logo-horizontal-transparent.png" alt="Armila's Restaurant and Lounge">
+      <img src="assets/logo-horizontal-transparent.png" alt="Armila's Restaurant and Lounge">
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="home-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9M5 10v10a1 1 0 0 0 1 1h3v-7h6v7h3a1 1 0 0 0 1-1V10"/></svg>
         Home
       </a></li>
+      <li><a href="index.html#worldcup">World Cup</a></li>
       <li><a href="index.html#sports">Sports</a></li>
       <li><a href="index.html#events">Events</a></li>
       <li><a href="index.html#lounge">Lounge</a></li>
@@ -469,7 +488,7 @@ button { font-family: inherit; }
   <div class="featured-inner">
     <div class="featured-img reveal">
       <span class="featured-tag">New · Signature</span>
-      <img src="food-royal-qabli.webp" alt="Royal Qabli Palaw wrapped in fresh Afghan bread">
+      <img src="assets/food-royal-qabli.webp" alt="Royal Qabli Palaw wrapped in fresh Afghan bread">
     </div>
     <div class="featured-content reveal">
       <span class="eyebrow on-cream">The House Signature</span>
@@ -494,9 +513,31 @@ button { font-family: inherit; }
   </div>
 </section>
 
+<!-- NIHARI TACOS — NEW ITEM FEATURE -->
+<section class="menu-newitem" id="nihari-tacos">
+  <div class="menu-newitem-inner">
+    <div class="menu-newitem-img reveal">
+      <span class="menu-newitem-tag">New</span>
+      <img src="assets/food-nihari-tacos.webp" alt="Nihari Tacos — slow-cooked nihari and melted cheese in a crisp golden shell" loading="lazy">
+    </div>
+    <div class="menu-newitem-content reveal">
+      <span class="eyebrow on-cream">Just Launched</span>
+      <h2>Nihari <em>Tacos.</em></h2>
+      <p>Our newest fusion creation. Bold, slow-cooked nihari and melted cheese folded into a crisp golden shell, finished with fresh herbs and served with our signature dip. Savoury, cheesy, and packed with flavour. Find it in the International section below, or ask your server.</p>
+      <div class="menu-newitem-price">$18</div>
+      <div class="menu-newitem-meta">
+        <span>Fusion</span>
+        <span>Cheesy</span>
+        <span>Shareable</span>
+        <span>100% Halal</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <div class="section-visual reveal">
-  <img src="food-mantu-real.webp" alt="Hand-folded mantu — Afghan dumplings" loading="lazy">
+  <img src="assets/food-mantu-real.webp" alt="Hand-folded mantu — Afghan dumplings" loading="lazy">
   <div class="section-visual-label">To start.</div>
 </div>
 
@@ -564,7 +605,7 @@ button { font-family: inherit; }
 
 
 <div class="section-visual reveal">
-  <img src="food-shola-styled.webp" alt="Shola with meatballs" loading="lazy">
+  <img src="assets/food-shola-styled.webp" alt="Shola with meatballs" loading="lazy">
   <div class="section-visual-label">From the kitchen.</div>
 </div>
 
@@ -646,7 +687,7 @@ button { font-family: inherit; }
 
 
 <div class="section-visual reveal">
-  <img src="food-shami-fire.webp" alt="Shami kabab over flame" loading="lazy">
+  <img src="assets/food-shami-fire.webp" alt="Shami kabab over flame" loading="lazy">
   <div class="section-visual-label">Over open flame.</div>
 </div>
 
@@ -736,7 +777,7 @@ button { font-family: inherit; }
 
 
 <div class="section-visual reveal">
-  <img src="food-chicken-karahi.webp" alt="Chicken karahi" loading="lazy">
+  <img src="assets/food-chicken-karahi.webp" alt="Chicken karahi" loading="lazy">
   <div class="section-visual-label">Beyond Afghanistan.</div>
 </div>
 
@@ -762,6 +803,13 @@ button { font-family: inherit; }
           <div class="dish-desc">Slow-cooked veal shank in a rich, velvety gravy infused with fragrant spices and caramelized onions. Served with naan or rice.</div>
         </div>
         <div class="dish-price">$23</div>
+      </div>
+      <div class="dish">
+        <div>
+          <div class="dish-name">Nihari Tacos <span class="badge new">New</span></div>
+          <div class="dish-desc">Our newest fusion creation. Bold, slow-cooked nihari and melted cheese folded into a crisp golden shell, finished with fresh herbs and served with a signature dip. Savoury, cheesy, and packed with flavour.</div>
+        </div>
+        <div class="dish-price">$18</div>
       </div>
       <div class="dish">
         <div>
@@ -818,7 +866,7 @@ button { font-family: inherit; }
 
 
 <div class="section-visual reveal">
-  <img src="food-biscoff-cake.webp" alt="Biscoff milk cake" loading="lazy">
+  <img src="assets/food-biscoff-cake.webp" alt="Biscoff milk cake" loading="lazy">
   <div class="section-visual-label">Sweet finishes.</div>
 </div>
 
@@ -865,7 +913,7 @@ button { font-family: inherit; }
 
 
 <div class="section-visual reveal">
-  <img src="drink-karak-pour.webp" alt="Karak chai pouring" loading="lazy">
+  <img src="assets/drink-karak-pour.webp" alt="Karak chai pouring" loading="lazy">
   <div class="section-visual-label">Tea time.</div>
 </div>
 
@@ -1043,7 +1091,7 @@ button { font-family: inherit; }
 <!-- MATCHA PROMO FEATURE -->
 <div class="matcha-feature">
   <div class="matcha-feature-img reveal">
-    <img src="drink-matcha-menu.webp" alt="Armila's matcha menu — now serving five new matcha drinks">
+    <img src="assets/drink-matcha-menu.webp" alt="Armila's matcha menu — now serving five new matcha drinks">
   </div>
 </div>
 
@@ -1117,7 +1165,7 @@ button { font-family: inherit; }
 <!-- FOOTER -->
 <footer class="footer">
   <div class="footer-inner">
-    <a href="index.html" class="footer-logo"><img src="logo-stacked-transparent.png" alt="Armila's"></a>
+    <a href="index.html" class="footer-logo"><img src="assets/logo-stacked-transparent.png" alt="Armila's"></a>
     <p class="footer-text">2200 Rymal Road East, Hamilton, ON · (289) 674-9692 · 100% Halal Kitchen</p>
     <div class="footer-links">
       <a href="index.html">Home</a>
