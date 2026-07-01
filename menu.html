@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Menu | Armila's Afghan Restaurant Hamilton — Kababs, Mantu, Matchas</title>
+<title>Menu | Armila's Afghan Restaurant Hamilton – Kababs, Mantu, Matchas</title>
 <meta name="description" content="Full menu at Armila's in Hamilton: the new Nihari Tacos, Royal Qabli Palaw, lamb chops, mantu, mixed grill, mocktails, matchas, and more. 100% halal. Over 1,000 five-star reviews. Open late.">
 <meta name="keywords" content="Armila's menu, Afghan menu Hamilton, halal menu Hamilton, Nihari Tacos Hamilton, Nihari Tacos, Royal Qabli Palaw, mantu, mixed grill platter, lamb chops Hamilton, Afghan kababs, matcha Hamilton, mojito Hamilton, Hamilton restaurant menu">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -237,7 +237,8 @@ button { font-family: inherit; }
 .promo-bar .close { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); width: 22px; height: 22px; border: none; background: transparent; color: var(--olive-shadow); font-size: 16px; cursor: pointer; opacity: 0.7; }
 .promo-bar.hidden { display: none; }
 .utility { background: var(--olive-shadow); color: var(--cream); font-size: 11px; letter-spacing: 0.16em; padding: 11px 20px; text-align: center; text-transform: uppercase; }
-.utility span { color: var(--saffron-soft); margin: 0 12px; }
+.utility .u-sep { color: var(--saffron-soft); margin: 0 12px; }
+.utility .u-item a { color: inherit; }
 
 /* NAV with Home button */
 .nav { position: sticky; top: 0; z-index: 100; background: rgba(245, 239, 224, 0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid rgba(77, 83, 64, 0.1); transition: all 400ms var(--ease); }
@@ -265,7 +266,7 @@ button { font-family: inherit; }
 .menu-header-back { background: transparent; color: var(--cream); border: 1px solid rgba(245, 239, 224, 0.4); padding: 14px 24px; }
 .menu-header-back:hover { background: var(--cream); color: var(--olive-shadow); }
 
-/* SECTION CHIP NAV — sticky scroll-to-section nav */
+/* SECTION CHIP NAV – sticky scroll-to-section nav */
 .chip-nav { position: sticky; top: 84px; z-index: 90; background: var(--cream); border-top: 1px solid rgba(77, 83, 64, 0.1); border-bottom: 1px solid rgba(77, 83, 64, 0.1); }
 .chip-nav-inner { max-width: 1400px; margin: 0 auto; display: flex; gap: 6px; padding: 14px 20px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .chip-nav-inner::-webkit-scrollbar { display: none; }
@@ -273,7 +274,7 @@ button { font-family: inherit; }
 .chip:hover { background: var(--olive-deep); color: var(--cream); }
 .chip.active { background: var(--saffron); color: var(--olive-shadow); }
 
-/* FEATURED SIGNATURE — Royal Qabli */
+/* FEATURED SIGNATURE – Royal Qabli */
 .featured { padding: 100px 40px 60px; background: var(--cream); }
 .featured-inner { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 1.05fr 1fr; gap: 80px; align-items: center; }
 .featured-img { aspect-ratio: 5/4; overflow: hidden; position: relative; }
@@ -360,12 +361,18 @@ button { font-family: inherit; }
   .dishes { grid-template-columns: 1fr; gap: 24px; }
   .menu-section-head { flex-wrap: wrap; gap: 16px; }}
 @media (max-width: 768px) {
-  .promo-bar { font-size: 11px; padding: 10px 36px 10px 16px; }
-  .utility { font-size: 10px; padding: 9px 16px; }
-  .nav-inner { padding: 14px 20px; }
-  .nav-logo { height: 38px; }
+  .promo-bar { font-size: 11px; padding: 9px 38px 9px 16px; line-height: 1.45; }
+  .promo-bar .sparkle, .promo-bar .dot { display: none; }
+  .promo-bar .promo-content { gap: 4px 10px; }
+  .utility { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 10px; font-size: 9.5px; letter-spacing: 0.1em; padding: 7px 16px; line-height: 1.5; }
+  .utility .u-sep, .utility .u-halal { display: none; }
+  .utility .u-item { width: 100%; }
+  .utility .u-item a { color: var(--saffron-soft); }
+  .nav-inner { padding: 12px 16px; }
+  .nav-logo { height: 34px; }
   .nav-links { gap: 14px; }
   .nav-links a:not(.home-link) { display: none; }
+  .nav-inner .btn-primary { padding: 11px 18px; font-size: 10px; letter-spacing: 0.14em; }
   .menu-header { padding: 70px 20px 60px; }
   .featured { padding: 60px 20px 40px; }
   .menu-section, .policy, .menu-cta-strip { padding: 56px 20px; }
@@ -376,8 +383,8 @@ button { font-family: inherit; }
   .dish-price { padding-left: 0; }
   .menu-section-head { flex-direction: column; align-items: flex-start; gap: 8px; }
   .menu-section-num { font-size: 18px; }
-  .mobile-bar { display: flex; }
-  body { padding-bottom: 64px; }
+  .mobile-bar { display: flex; padding-bottom: env(safe-area-inset-bottom); }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
   .footer { padding: 56px 20px 90px; }}
 
 .section-visual { width: 100%; max-width: 1040px; aspect-ratio: 3/2; overflow: hidden; position: relative; margin: 0 auto; }
@@ -386,12 +393,12 @@ button { font-family: inherit; }
 .section-visual-label { position: absolute; bottom: 24px; left: 32px; color: var(--cream); font-family: var(--serif); font-style: italic; font-size: clamp(20px, 2.5vw, 32px); z-index: 2; letter-spacing: -0.01em; }
 .section-visual-label::before { content: ''; display: inline-block; width: 28px; height: 1px; background: var(--saffron); margin-right: 16px; vertical-align: middle; }
 
-/* Matcha section special visual — uses the promo poster as is */
+/* Matcha section special visual – uses the promo poster as is */
 .matcha-feature { padding: 60px 40px 20px; background: var(--cream-warm); display: flex; justify-content: center; }
 .matcha-feature-img { max-width: 720px; width: 100%; overflow: hidden; box-shadow: 0 24px 60px rgba(31,27,20,0.18); }
 .matcha-feature-img img { width: 100%; height: auto; display: block; }
 
-/* Nihari Tacos — new item feature (portrait photo, shown in full) */
+/* Nihari Tacos – new item feature (portrait photo, shown in full) */
 .menu-newitem { background: var(--cream-warm); padding: 72px 40px; }
 .menu-newitem-inner { max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: 0.86fr 1.14fr; gap: 60px; align-items: center; }
 .menu-newitem-img { aspect-ratio: 4/5; overflow: hidden; position: relative; box-shadow: 0 24px 56px rgba(31,27,20,0.2); }
@@ -421,7 +428,7 @@ button { font-family: inherit; }
 <!-- PROMO BAR -->
 <div class="promo-bar" id="promoBar">
   <div class="promo-content">
-    <span><strong>The 2026 World Cup is live at Armila's</strong> — every match on one of Hamilton's biggest screens</span>
+    <span><strong>The 2026 World Cup is live at Armila's.</strong> Every match on one of Hamilton's biggest screens</span>
     <span class="dot">◆</span>
     <a href="index.html#worldcup">See the Schedule →</a>
   </div>
@@ -430,7 +437,11 @@ button { font-family: inherit; }
 
 <!-- UTILITY -->
 <div class="utility">
-  100% Halal Afghan Kitchen <span>◆</span> Open until 2 AM Thu – Sat <span>◆</span> Reservations · (289) 674-9692
+  <span class="u-item u-halal">100% Halal Afghan Kitchen</span>
+  <span class="u-sep">◆</span>
+  <span class="u-item">Open until 2 AM Thu – Sat</span>
+  <span class="u-sep">◆</span>
+  <span class="u-item">Reservations · <a href="tel:2896749692">(289) 674-9692</a></span>
 </div>
 
 <!-- NAV WITH HOME LINK -->
@@ -467,7 +478,7 @@ button { font-family: inherit; }
   </div>
 </header>
 
-<!-- CHIP NAV — sticky section jump -->
+<!-- CHIP NAV – sticky section jump -->
 <div class="chip-nav" id="chipNav">
   <div class="chip-nav-inner">
     <a class="chip" href="#appetizers">Appetizers</a>
@@ -513,12 +524,12 @@ button { font-family: inherit; }
   </div>
 </section>
 
-<!-- NIHARI TACOS — NEW ITEM FEATURE -->
+<!-- NIHARI TACOS – NEW ITEM FEATURE -->
 <section class="menu-newitem" id="nihari-tacos">
   <div class="menu-newitem-inner">
     <div class="menu-newitem-img reveal">
       <span class="menu-newitem-tag">New</span>
-      <img src="assets/food-nihari-tacos.webp" alt="Nihari Tacos — slow-cooked nihari and melted cheese in a crisp golden shell" loading="lazy">
+      <img src="assets/food-nihari-tacos.webp" alt="Nihari Tacos – slow-cooked nihari and melted cheese in a crisp golden shell" loading="lazy">
     </div>
     <div class="menu-newitem-content reveal">
       <span class="eyebrow on-cream">Just Launched</span>
@@ -537,7 +548,7 @@ button { font-family: inherit; }
 
 
 <div class="section-visual reveal">
-  <img src="assets/food-mantu-real.webp" alt="Hand-folded mantu — Afghan dumplings" loading="lazy">
+  <img src="assets/food-mantu-real.webp" alt="Hand-folded mantu – Afghan dumplings" loading="lazy">
   <div class="section-visual-label">To start.</div>
 </div>
 
@@ -545,7 +556,7 @@ button { font-family: inherit; }
 <section class="menu-section" id="appetizers">
   <div class="menu-section-inner">
     <div class="menu-section-head reveal">
-      <div class="menu-section-num">— 01</div>
+      <div class="menu-section-num">– 01</div>
       <h2>Appetizers</h2>
       <div class="menu-section-note">To start.</div>
     </div>
@@ -613,7 +624,7 @@ button { font-family: inherit; }
 <section class="menu-section alt" id="mains">
   <div class="menu-section-inner">
     <div class="menu-section-head reveal">
-      <div class="menu-section-num">— 02</div>
+      <div class="menu-section-num">– 02</div>
       <h2>Main Entrées</h2>
       <div class="menu-section-note">From the kitchen.</div>
     </div>
@@ -695,7 +706,7 @@ button { font-family: inherit; }
 <section class="menu-section" id="grill">
   <div class="menu-section-inner">
     <div class="menu-section-head reveal">
-      <div class="menu-section-num">— 03</div>
+      <div class="menu-section-num">– 03</div>
       <h2>From the Grill</h2>
       <div class="menu-section-note">Over open flame.</div>
     </div>
@@ -785,7 +796,7 @@ button { font-family: inherit; }
 <section class="menu-section alt" id="international">
   <div class="menu-section-inner">
     <div class="menu-section-head reveal">
-      <div class="menu-section-num">— 04</div>
+      <div class="menu-section-num">– 04</div>
       <h2>International</h2>
       <div class="menu-section-note">Beyond Afghanistan.</div>
     </div>
@@ -827,7 +838,7 @@ button { font-family: inherit; }
 <section class="menu-section" id="kids">
   <div class="menu-section-inner">
     <div class="menu-section-head reveal">
-      <div class="menu-section-num">— 05</div>
+      <div class="menu-section-num">– 05</div>
       <h2>Kids Menu</h2>
       <div class="menu-section-note">For the little ones.</div>
     </div>
@@ -874,7 +885,7 @@ button { font-family: inherit; }
 <section class="menu-section alt" id="desserts">
   <div class="menu-section-inner">
     <div class="menu-section-head reveal">
-      <div class="menu-section-num">— 06</div>
+      <div class="menu-section-num">– 06</div>
       <h2>Desserts</h2>
       <div class="menu-section-note">Sweet finishes.</div>
     </div>
@@ -921,7 +932,7 @@ button { font-family: inherit; }
 <section class="menu-section" id="hot-drinks">
   <div class="menu-section-inner">
     <div class="menu-section-head reveal">
-      <div class="menu-section-num">— 07</div>
+      <div class="menu-section-num">– 07</div>
       <h2>Hot Drinks</h2>
       <div class="menu-section-note">Tea time.</div>
     </div>
@@ -956,7 +967,7 @@ button { font-family: inherit; }
 <section class="menu-section alt" id="cold-drinks">
   <div class="menu-section-inner">
     <div class="menu-section-head reveal">
-      <div class="menu-section-num">— 08</div>
+      <div class="menu-section-num">– 08</div>
       <h2>Cold Drinks</h2>
       <div class="menu-section-note">Fresh & juiced.</div>
     </div>
@@ -1051,7 +1062,7 @@ button { font-family: inherit; }
 <section class="menu-section" id="mojitos">
   <div class="menu-section-inner">
     <div class="menu-section-head reveal">
-      <div class="menu-section-num">— 09</div>
+      <div class="menu-section-num">– 09</div>
       <h2>Mojitos</h2>
       <div class="menu-section-note">All $8</div>
     </div>
@@ -1091,7 +1102,7 @@ button { font-family: inherit; }
 <!-- MATCHA PROMO FEATURE -->
 <div class="matcha-feature">
   <div class="matcha-feature-img reveal">
-    <img src="assets/drink-matcha-menu.webp" alt="Armila's matcha menu — now serving five new matcha drinks">
+    <img src="assets/drink-matcha-menu.webp" alt="Armila's matcha menu – now serving five new matcha drinks">
   </div>
 </div>
 
@@ -1099,7 +1110,7 @@ button { font-family: inherit; }
 <section class="menu-section alt" id="matchas">
   <div class="menu-section-inner">
     <div class="menu-section-head reveal">
-      <div class="menu-section-num">— 10</div>
+      <div class="menu-section-num">– 10</div>
       <h2>Matchas</h2>
       <div class="menu-section-note">All $8</div>
     </div>

@@ -32,7 +32,7 @@
 <meta property="og:image" content="https://armilaslounge.com/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Armila's Restaurant — Afghan flavours, Hamilton nights">
+<meta property="og:image:alt" content="Armila's Restaurant – Afghan flavours, Hamilton nights">
 <meta property="og:locale" content="en_CA">
 
 <meta name="twitter:card" content="summary_large_image">
@@ -211,7 +211,8 @@ button { font-family: inherit; }
 
 /* UTILITY BAR */
 .utility { background: var(--olive-shadow); color: var(--cream); font-size: 11px; letter-spacing: 0.16em; padding: 11px 20px; text-align: center; text-transform: uppercase; font-weight: 400; }
-.utility span { color: var(--saffron-soft); margin: 0 12px; }
+.utility .u-sep { color: var(--saffron-soft); margin: 0 12px; }
+.utility .u-item a { color: inherit; }
 
 /* NAV */
 .nav { position: sticky; top: 0; z-index: 100; background: rgba(245, 239, 224, 0.92); backdrop-filter: blur(20px) saturate(140%); -webkit-backdrop-filter: blur(20px) saturate(140%); border-bottom: 1px solid rgba(77, 83, 64, 0.1); transition: all 400ms var(--ease); }
@@ -225,7 +226,7 @@ button { font-family: inherit; }
 .nav-links a:hover::after { transform: scaleX(1); }
 .nav-links a:hover { color: var(--charcoal); }
 
-/* HERO — clean two-line headline, no banding */
+/* HERO – clean two-line headline, no banding */
 .hero { position: relative; height: 100vh; min-height: 720px; max-height: 1040px; overflow: hidden; background: var(--olive-black); color: var(--cream); }
 .hero-bg {
   position: absolute;
@@ -326,7 +327,7 @@ button { font-family: inherit; }
 .marquee-track .dot { color: var(--saffron); }
 @keyframes scrollX { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-/* PROOF STRIP — Social proof: 100% Halal, 1000+ reviews, etc */
+/* PROOF STRIP – Social proof: 100% Halal, 1000+ reviews, etc */
 .proof {
   background: var(--cream-warm);
   padding: 64px 40px;
@@ -557,7 +558,7 @@ button { font-family: inherit; }
 .gal-1 { grid-row: 1 / 3; }
 .gallery-cta { text-align: center; margin-top: 64px; }
 
-/* INSTAGRAM — simplified header */
+/* INSTAGRAM – simplified header */
 .instagram { background: var(--cream-warm); padding: 140px 40px; position: relative; overflow: hidden; }
 .instagram::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 50% 0%, rgba(216, 117, 69, 0.05) 0%, transparent 50%); }
 .instagram-inner { max-width: 1400px; margin: 0 auto; position: relative; }
@@ -623,6 +624,18 @@ button { font-family: inherit; }
 .occasion-pill .pill { display: block; padding: 12px 8px; background: rgba(245, 239, 224, 0.04); border: 1px solid rgba(245, 239, 224, 0.15); text-align: center; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cream); transition: all 300ms var(--ease); font-weight: 500; }
 .occasion-pill:hover .pill { background: rgba(245, 239, 224, 0.08); border-color: rgba(219, 180, 92, 0.4); }
 .occasion-pill input:checked + .pill { background: var(--saffron); color: var(--olive-shadow); border-color: var(--saffron); }
+
+/* RESERVE BY PHONE */
+.reserve-phone { max-width: 760px; margin: 0 auto; text-align: center; }
+.reserve-phone .eyebrow { display: inline-block; margin-bottom: 28px; }
+.reserve-phone h2 { font-family: var(--serif); font-size: clamp(40px, 5.5vw, 68px); font-weight: 300; line-height: 1.04; letter-spacing: -0.018em; margin-bottom: 28px; color: var(--cream); }
+.reserve-phone h2 em { color: var(--saffron-pale); font-style: italic; font-weight: 300; }
+.reserve-phone p { font-size: 16.5px; line-height: 1.75; color: rgba(245, 239, 224, 0.8); margin: 0 auto 40px; max-width: 620px; }
+.reserve-phone-number { display: inline-block; font-family: var(--serif); font-size: clamp(42px, 7vw, 66px); font-weight: 400; color: var(--saffron); letter-spacing: 0.01em; margin-bottom: 14px; transition: color 300ms var(--ease); }
+.reserve-phone-number:hover { color: var(--saffron-soft); }
+.reserve-phone-hours { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(245, 239, 224, 0.55); margin-bottom: 44px; }
+.reserve-phone-ctas { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.reserve-phone-note { margin-top: 40px; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(245, 239, 224, 0.38); }
 .form-submit { margin-top: 32px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 .form-note { font-size: 12px; color: rgba(245, 239, 224, 0.55); font-style: italic; margin-top: 16px; line-height: 1.5; }
 .form-success { display: none; padding: 24px; background: rgba(200, 147, 47, 0.15); border: 1px solid var(--saffron-pale); color: var(--saffron-pale); margin-top: 20px; text-align: center; font-family: var(--serif); font-size: 18px; font-style: italic; }
@@ -740,7 +753,7 @@ button { font-family: inherit; }
 .worldcup-note { font-family: var(--serif); font-style: italic; font-size: 16px; color: rgba(245,239,224,0.75); }
 .worldcup-note a { color: var(--saffron-pale); border-bottom: 1px solid currentColor; padding-bottom: 1px; }
 
-/* ============ NIHARI TACOS — NEW ITEM FEATURE ============ */
+/* ============ NIHARI TACOS – NEW ITEM FEATURE ============ */
 .newitem { background: var(--cream-warm); padding: 130px 40px; position: relative; overflow: hidden; }
 .newitem-inner { max-width: 1300px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.02fr; gap: 80px; align-items: center; }
 .newitem-visual { position: relative; }
@@ -779,11 +792,17 @@ button { font-family: inherit; }
   .newitem-visual { max-width: 520px; margin: 0 auto; width: 100%; }
 }
 @media (max-width: 768px) {
-  .promo-bar { font-size: 11px; padding: 10px 36px 10px 16px; }
-  .utility { font-size: 10px; padding: 9px 16px; }
-  .nav-inner { padding: 14px 20px; gap: 12px; }
-  .nav-logo { height: 38px; }
+  .promo-bar { font-size: 11px; padding: 9px 38px 9px 16px; line-height: 1.45; }
+  .promo-bar .sparkle, .promo-bar .dot { display: none; }
+  .promo-bar .promo-content { gap: 4px 10px; }
+  .utility { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 10px; font-size: 9.5px; letter-spacing: 0.1em; padding: 7px 16px; line-height: 1.5; }
+  .utility .u-sep, .utility .u-halal { display: none; }
+  .utility .u-item { width: 100%; }
+  .utility .u-item a { color: var(--saffron-soft); }
+  .nav-inner { padding: 12px 16px; gap: 12px; }
+  .nav-logo { height: 34px; }
   .nav-links { display: none; }
+  .nav-inner .btn-primary { padding: 11px 18px; font-size: 10px; letter-spacing: 0.14em; }
   .section, .late-night, .gallery, .instagram, .visit, .faq, .reservation { padding: 90px 20px; }
   .sports-inner { padding: 90px 20px; }
   .footer { padding: 90px 20px 100px; }
@@ -801,9 +820,9 @@ button { font-family: inherit; }
   .gal-1 { grid-row: 1 / 3; grid-column: 1; }
   .ig-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
   .visit-card { padding: 44px 28px; }
-  .mobile-bar { display: flex; }
+  .mobile-bar { display: flex; padding-bottom: env(safe-area-inset-bottom); }
   .float-cta { display: none; }
-  body { padding-bottom: 64px; }
+  body { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
   .marquee { font-size: 10px; padding: 18px 0; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
@@ -815,6 +834,8 @@ button { font-family: inherit; }
   .reservation-form { padding: 32px 24px; }
   .form-row { grid-template-columns: 1fr; }
   .occasion-pills { grid-template-columns: 1fr 1fr; }
+  .reserve-phone-ctas { flex-direction: column; align-items: stretch; }
+  .reserve-phone-ctas .btn { width: 100%; }
   .events-stats { gap: 24px; }
   .map-overlay { left: 16px; right: 16px; bottom: 16px; max-width: none; }
   .worldcup { padding: 84px 20px; }
@@ -830,11 +851,11 @@ button { font-family: inherit; }
 </head>
 <body>
 
-<!-- PROMO BAR — World Cup live -->
+<!-- PROMO BAR – World Cup live -->
 <div class="promo-bar" id="promoBar">
   <div class="promo-content">
     <span class="sparkle">✦</span>
-    <span><strong>The 2026 World Cup is live at Armila's</strong> — every match on one of Hamilton's biggest screens</span>
+    <span><strong>The 2026 World Cup is live at Armila's.</strong> Every match on one of Hamilton's biggest screens</span>
     <span class="dot">◆</span>
     <a href="#worldcup">See the Schedule →</a>
   </div>
@@ -843,7 +864,11 @@ button { font-family: inherit; }
 
 <!-- UTILITY -->
 <div class="utility">
-  100% Halal Afghan Kitchen <span>◆</span> Open until 2 AM Thu – Sat <span>◆</span> Reservations · (289) 674-9692
+  <span class="u-item u-halal">100% Halal Afghan Kitchen</span>
+  <span class="u-sep">◆</span>
+  <span class="u-item">Open until 2 AM Thu – Sat</span>
+  <span class="u-sep">◆</span>
+  <span class="u-item">Reservations · <a href="tel:2896749692">(289) 674-9692</a></span>
 </div>
 
 <!-- NAV -->
@@ -864,7 +889,7 @@ button { font-family: inherit; }
   </div>
 </nav>
 
-<!-- HERO — Two lines only: Afghan Flavours / Hamilton Nights -->
+<!-- HERO – Two lines only: Afghan Flavours / Hamilton Nights -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-tint"></div>
@@ -965,7 +990,7 @@ button { font-family: inherit; }
         <a href="#reserve" class="btn btn-primary">Reserve for Game Day</a>
         <a href="#events" class="btn btn-outline-cream">Book a Watch Party</a>
       </div>
-      <p class="worldcup-note">Daily match lineups and kickoff times on our Instagram — <a href="https://www.instagram.com/armilaslounge/" target="_blank" rel="noopener">@armilaslounge</a></p>
+      <p class="worldcup-note">Daily match lineups and kickoff times on our Instagram – <a href="https://www.instagram.com/armilaslounge/" target="_blank" rel="noopener">@armilaslounge</a></p>
     </div>
   </div>
 </section>
@@ -981,7 +1006,7 @@ button { font-family: inherit; }
     <div class="pillar-grid">
       <article class="pillar reveal">
         <div class="pillar-img">
-          <span class="pillar-num">— No. 01</span>
+          <span class="pillar-num">– No. 01</span>
           <img src="assets/food-grand-platter.webp" alt="Afghan grand platter with lamb shank and kababs" loading="lazy">
         </div>
         <div class="pillar-body">
@@ -992,7 +1017,7 @@ button { font-family: inherit; }
       </article>
       <article class="pillar reveal reveal-delay-1">
         <div class="pillar-img">
-          <span class="pillar-num">— No. 02</span>
+          <span class="pillar-num">– No. 02</span>
           <img src="assets/interior-wide.webp" alt="Armila's interior with TV screen and dining room" loading="lazy">
         </div>
         <div class="pillar-body">
@@ -1003,7 +1028,7 @@ button { font-family: inherit; }
       </article>
       <article class="pillar reveal reveal-delay-2">
         <div class="pillar-img">
-          <span class="pillar-num">— No. 03</span>
+          <span class="pillar-num">– No. 03</span>
           <img src="assets/drink-matcha.webp" alt="Iced matcha and dessert at Armila's lounge" loading="lazy">
         </div>
         <div class="pillar-body">
@@ -1014,7 +1039,7 @@ button { font-family: inherit; }
       </article>
       <article class="pillar reveal reveal-delay-3">
         <div class="pillar-img">
-          <span class="pillar-num">— No. 04</span>
+          <span class="pillar-num">– No. 04</span>
           <img src="assets/food-feast-table.webp" alt="Catering and private events at Armila's" loading="lazy">
         </div>
         <div class="pillar-body">
@@ -1027,7 +1052,7 @@ button { font-family: inherit; }
   </div>
 </section>
 
-<!-- SPORTS — Updated 3-line headline -->
+<!-- SPORTS – Updated 3-line headline -->
 <section class="sports" id="sports">
   <div class="sports-bg"></div>
   <div class="sports-overlay"></div>
@@ -1088,7 +1113,7 @@ button { font-family: inherit; }
         <a href="#reserve" class="btn btn-primary">Reserve for Game Day</a>
         <a href="#events" class="btn btn-outline-cream">Book a Watch Party</a>
       </div>
-      <p class="sports-note">"Think they have the biggest screen in Hamilton" — Munchhalal</p>
+      <p class="sports-note">"Think they have the biggest screen in Hamilton" – Munchhalal</p>
     </div>
   </div>
 </section>
@@ -1115,7 +1140,7 @@ button { font-family: inherit; }
   </div>
 </section>
 
-<!-- SIGNATURE DISHES — Updated image mapping -->
+<!-- SIGNATURE DISHES – Updated image mapping -->
 <section class="section signature" id="signature">
   <div class="section-inner">
     <div class="section-head reveal">
@@ -1209,13 +1234,13 @@ button { font-family: inherit; }
   </div>
 </section>
 
-<!-- NIHARI TACOS — NEW ITEM -->
+<!-- NIHARI TACOS – NEW ITEM -->
 <section class="newitem" id="nihari-tacos">
   <div class="newitem-inner">
     <div class="newitem-visual reveal">
       <div class="img-main">
         <span class="newitem-tag">New · Now Serving</span>
-        <img src="assets/food-nihari-tacos.webp" alt="Nihari Tacos at Armila's — slow-cooked nihari and melted cheese in a crisp golden shell" loading="lazy">
+        <img src="assets/food-nihari-tacos.webp" alt="Nihari Tacos at Armila's – slow-cooked nihari and melted cheese in a crisp golden shell" loading="lazy">
       </div>
       <div class="img-inset">
         <img src="assets/food-nihari-tacos-overhead.webp" alt="Nihari Tacos served with dipping sauce, lemon, and grilled chillies" loading="lazy">
@@ -1239,7 +1264,7 @@ button { font-family: inherit; }
   </div>
 </section>
 
-<!-- EVENTS — 75 guest cap -->
+<!-- EVENTS – 75 guest cap -->
 <section class="section events" id="events">
   <div class="section-inner events-inner">
     <div class="events-grid">
@@ -1302,7 +1327,7 @@ button { font-family: inherit; }
       <img src="assets/food-nihari-real.webp" alt="Late night at Armila's Hamilton">
       <div class="late-time">
         <div class="num"><em>until</em> 2<small>am</small></div>
-        <div class="lbl">Thursday — Saturday</div>
+        <div class="lbl">Thursday – Saturday</div>
       </div>
     </div>
     <div class="late-text reveal reveal-delay-2">
@@ -1323,7 +1348,7 @@ button { font-family: inherit; }
   </div>
 </section>
 
-<!-- LOUNGE — removed LED ice cubes reference -->
+<!-- LOUNGE – removed LED ice cubes reference -->
 <section class="section lounge" id="lounge">
   <div class="lounge-bg-image"></div>
   <div class="lounge-overlay"></div>
@@ -1335,7 +1360,7 @@ button { font-family: inherit; }
     </div>
     <div class="lounge-grid">
       <div class="lounge-item reveal">
-        <div class="lounge-num">— No. 01 —</div>
+        <div class="lounge-num">– No. 01 –</div>
         <svg class="lounge-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
           <path d="M20 18 L44 18 L40 50 Q40 54 36 54 L28 54 Q24 54 24 50 Z"/>
           <path d="M22 26 L42 26"/>
@@ -1347,7 +1372,7 @@ button { font-family: inherit; }
         <p>Pineapple dragon fruit, strawberry rose, blueberry, lemon mint, and classic lemonade. Squeezed daily.</p>
       </div>
       <div class="lounge-item reveal reveal-delay-1">
-        <div class="lounge-num">— No. 02 —</div>
+        <div class="lounge-num">– No. 02 –</div>
         <svg class="lounge-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
           <path d="M16 16 L48 16 L40 36 L24 36 Z"/>
           <path d="M32 36 L32 52 M24 52 L40 52"/>
@@ -1358,7 +1383,7 @@ button { font-family: inherit; }
         <p>Blue lagoon, watermelon, strawberry-rose, classic mojitos. Iced vanilla, strawberry, coconut cloud, and Sabrina's signature matcha.</p>
       </div>
       <div class="lounge-item reveal reveal-delay-2">
-        <div class="lounge-num">— No. 03 —</div>
+        <div class="lounge-num">– No. 03 –</div>
         <svg class="lounge-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.2">
           <path d="M18 24 L46 24 L44 48 L20 48 Z"/>
           <path d="M46 28 L52 28 Q54 32 52 38 L46 38"/>
@@ -1406,7 +1431,7 @@ button { font-family: inherit; }
   </div>
 </section>
 
-<!-- INSTAGRAM — simplified header -->
+<!-- INSTAGRAM – simplified header -->
 <section class="instagram" id="instagram">
   <div class="instagram-inner">
     <div class="ig-header reveal">
@@ -1480,102 +1505,17 @@ button { font-family: inherit; }
 <!-- RESERVATION FORM -->
 <section class="reservation" id="reserve">
   <div class="reservation-inner">
-    <div class="reservation-grid">
-      <div class="reservation-left reveal">
-        <span class="eyebrow on-dark">Reserve & Book</span>
-        <h2>Reserve a table <em>or plan an event.</em></h2>
-        <p>For dining reservations, a private event, sports watch party, or catering inquiry. Fill out the form and we will get back to you within 24 hours.</p>
-        <p>For urgent or same-day requests, please call us directly.</p>
-        <div class="reservation-contact">
-          <h4>Or reach us directly</h4>
-          <a href="tel:2896749692">(289) 674-9692</a>
-          <a href="mailto:info@armilaslounge.com">info@armilaslounge.com</a>
-        </div>
+    <div class="reserve-phone reveal">
+      <span class="eyebrow on-dark">Reservations</span>
+      <h2>Reserve <em>by phone.</em></h2>
+      <p>For dining reservations, private events, sports watch parties, or catering, give our team a call and we will take care of the details. We are always happy to help with large groups and special occasions.</p>
+      <a href="tel:2896749692" class="reserve-phone-number">(289) 674-9692</a>
+      <div class="reserve-phone-hours">Open Late · Until 2 AM Thursday to Saturday</div>
+      <div class="reserve-phone-ctas">
+        <a href="tel:2896749692" class="btn btn-primary">Call to Reserve</a>
+        <a href="mailto:info@armilaslounge.com" class="btn btn-outline-cream">Email Us</a>
       </div>
-      <form class="reservation-form reveal reveal-delay-1" id="reservationForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="form-row">
-          <div class="form-field">
-            <label for="resName">Name</label>
-            <input type="text" id="resName" name="name" placeholder="Your full name" required>
-          </div>
-          <div class="form-field">
-            <label for="resPhone">Phone</label>
-            <input type="tel" id="resPhone" name="phone" placeholder="(289) 555-0000" required>
-          </div>
-        </div>
-        <div class="form-field full">
-          <label for="resEmail">Email</label>
-          <input type="email" id="resEmail" name="email" placeholder="you@example.com" required>
-        </div>
-
-        <div class="form-field full" style="margin-top: 24px;">
-          <label>What are you planning?</label>
-          <div class="occasion-pills">
-            <label class="occasion-pill"><input type="radio" name="occasion" value="dining" checked><span class="pill">Dining</span></label>
-            <label class="occasion-pill"><input type="radio" name="occasion" value="event"><span class="pill">Private Event</span></label>
-            <label class="occasion-pill"><input type="radio" name="occasion" value="catering"><span class="pill">Catering</span></label>
-            <label class="occasion-pill"><input type="radio" name="occasion" value="sports"><span class="pill">Sports Party</span></label>
-          </div>
-        </div>
-
-        <div class="form-row" style="margin-top: 24px;">
-          <div class="form-field">
-            <label for="resDate">Date</label>
-            <input type="date" id="resDate" name="date" required>
-          </div>
-          <div class="form-field">
-            <label for="resTime">Time</label>
-            <select id="resTime" name="time" required>
-              <option value="">Select a time</option>
-              <option>12:00 PM</option><option>12:30 PM</option>
-              <option>1:00 PM</option><option>1:30 PM</option>
-              <option>2:00 PM</option><option>2:30 PM</option>
-              <option>5:00 PM</option><option>5:30 PM</option>
-              <option>6:00 PM</option><option>6:30 PM</option>
-              <option>7:00 PM</option><option>7:30 PM</option>
-              <option>8:00 PM</option><option>8:30 PM</option>
-              <option>9:00 PM</option><option>9:30 PM</option>
-              <option>10:00 PM</option><option>10:30 PM</option>
-              <option>11:00 PM</option><option>11:30 PM</option>
-              <option>12:00 AM</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-field">
-            <label for="resPartySize">Party Size</label>
-            <select id="resPartySize" name="party_size" required>
-              <option value="">How many guests?</option>
-              <option>1 – 2</option>
-              <option>3 – 4</option>
-              <option>5 – 6</option>
-              <option>7 – 10</option>
-              <option>11 – 20</option>
-              <option>21 – 50</option>
-              <option>51 – 75</option>
-            </select>
-          </div>
-          <div class="form-field">
-            <label for="resSeating">Seating Preference</label>
-            <select id="resSeating" name="seating">
-              <option value="no-preference">No preference</option>
-              <option value="dining-area">Dining area</option>
-              <option value="lounge">Lounge section</option>
-              <option value="sports-view">Near the big screen</option>
-              <option value="private">Private area</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-field full" style="margin-top: 16px;">
-          <label for="resNotes">Notes (occasion, dietary needs, special requests)</label>
-          <textarea id="resNotes" name="notes" placeholder="Birthday, vegetarian guests, allergies, sports preference..."></textarea>
-        </div>
-        <div class="form-submit">
-          <button type="submit" class="btn btn-primary">Send Request</button>
-          <span class="form-note">No spam. We respond within 24 hours.</span>
-        </div>
-        <div class="form-success" id="formSuccess">Thank you. We have received your request and will be in touch within 24 hours.</div>
-      </form>
+      <div class="reserve-phone-note">Online booking coming soon</div>
     </div>
   </div>
 </section>
@@ -1748,34 +1688,6 @@ window.addEventListener('scroll', () => {
   const y = window.scrollY;
   if (y > 20) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
   if (y > window.innerHeight * 0.6) floatCta.classList.add('visible'); else floatCta.classList.remove('visible');
-});
-
-const dateInput = document.getElementById('resDate');
-if (dateInput) { dateInput.min = new Date().toISOString().split('T')[0]; }
-
-const form = document.getElementById('reservationForm');
-const formSuccess = document.getElementById('formSuccess');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const submitBtn = form.querySelector('button[type="submit"]');
-  const originalText = submitBtn.textContent;
-  submitBtn.disabled = true;
-  submitBtn.textContent = 'Sending…';
-  try {
-    const formData = new FormData(form);
-    const action = form.getAttribute('action');
-    if (action && !action.includes('YOUR_FORM_ID')) {
-      const response = await fetch(action, { method: 'POST', body: formData, headers: { 'Accept': 'application/json' } });
-      if (response.ok) { form.reset(); formSuccess.classList.add('visible'); setTimeout(() => formSuccess.classList.remove('visible'), 8000); }
-      else { throw new Error('Submit failed'); }
-    } else {
-      const data = Object.fromEntries(formData);
-      const body = `Name: ${data.name}%0D%0APhone: ${data.phone}%0D%0AEmail: ${data.email}%0D%0AOccasion: ${data.occasion}%0D%0ADate: ${data.date}%0D%0ATime: ${data.time}%0D%0AParty size: ${data.party_size}%0D%0ASeating: ${data.seating}%0D%0ANotes: ${data.notes || 'None'}`;
-      window.location.href = `mailto:info@armilaslounge.com?subject=Reservation Request&body=${body}`;
-      formSuccess.classList.add('visible');
-    }
-  } catch (err) { alert('Something went wrong. Please call us at (289) 674-9692.'); }
-  finally { submitBtn.disabled = false; submitBtn.textContent = originalText; }
 });
 </script>
 
