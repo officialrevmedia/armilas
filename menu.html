@@ -254,23 +254,23 @@ button { font-family: inherit; }
 .nav-links a:hover::after { transform: scaleX(1); }
 
 /* HEADER */
-.menu-header { background: var(--olive-shadow); color: var(--cream); padding: 120px 40px 100px; position: relative; overflow: hidden; }
+.menu-header { background: var(--olive-shadow); color: var(--cream); padding: 64px 40px 44px; position: relative; overflow: hidden; }
 .menu-header::before { content: ''; position: absolute; inset: 0; background-image: url("data:image/svg+xml,%3Csvg width='220' height='220' viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23DBB45C' stroke-width='0.6' opacity='0.5'%3E%3Cpath d='M110 30 L138 70 L182 70 L150 100 L162 144 L110 116 L58 144 L70 100 L38 70 L82 70 Z'/%3E%3Ccircle cx='110' cy='110' r='3' fill='%23DBB45C'/%3E%3C/g%3E%3C/svg%3E"); background-size: 320px; opacity: 0.06; }
 .menu-header::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 30%, rgba(216, 117, 69, 0.18) 0%, transparent 60%), radial-gradient(ellipse at 20% 80%, rgba(200, 147, 47, 0.12) 0%, transparent 50%); }
 .menu-header-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; text-align: center; }
-.menu-header .eyebrow { display: inline-block; margin-bottom: 28px; color: var(--saffron-pale); }
-.menu-header h1 { font-family: var(--serif); font-size: clamp(56px, 9vw, 132px); font-weight: 300; line-height: 0.96; letter-spacing: -0.024em; color: var(--cream); margin-bottom: 36px; }
+.menu-header .eyebrow { display: inline-block; margin-bottom: 14px; color: var(--saffron-pale); }
+.menu-header h1 { font-family: var(--serif); font-size: clamp(34px, 4.4vw, 60px); font-weight: 300; line-height: 1.02; letter-spacing: -0.02em; color: var(--cream); margin-bottom: 16px; }
 .menu-header h1 em { color: var(--saffron-pale); font-style: italic; font-weight: 300; }
-.menu-header p { font-size: 17px; line-height: 1.75; color: rgba(245, 239, 224, 0.78); max-width: 600px; margin: 0 auto 36px; }
+.menu-header p { font-size: 15.5px; line-height: 1.7; color: rgba(245, 239, 224, 0.78); max-width: 660px; margin: 0 auto 26px; }
 .menu-header-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .menu-header-back { background: transparent; color: var(--cream); border: 1px solid rgba(245, 239, 224, 0.4); padding: 14px 24px; }
 .menu-header-back:hover { background: var(--cream); color: var(--olive-shadow); }
 
 /* SECTION CHIP NAV – sticky scroll-to-section nav */
-.chip-nav { position: sticky; top: 84px; z-index: 90; background: var(--cream); border-top: 1px solid rgba(77, 83, 64, 0.1); border-bottom: 1px solid rgba(77, 83, 64, 0.1); }
+.chip-nav { position: sticky; top: 92px; z-index: 90; background: var(--cream); border-top: 1px solid rgba(77, 83, 64, 0.1); border-bottom: 1px solid rgba(77, 83, 64, 0.1); }
 .chip-nav-inner { max-width: 1400px; margin: 0 auto; display: flex; gap: 6px; padding: 14px 20px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .chip-nav-inner::-webkit-scrollbar { display: none; }
-.chip { flex-shrink: 0; padding: 9px 17px; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--olive-deep); background: var(--cream-warm); transition: all 300ms var(--ease); border: 1px solid transparent; white-space: nowrap; cursor: pointer; }
+.chip { flex-shrink: 0; padding: 10px 17px; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--olive-deep); background: var(--cream-warm); transition: all 300ms var(--ease); border: 1px solid transparent; white-space: nowrap; cursor: pointer; }
 .chip:hover { background: var(--olive-deep); color: var(--cream); }
 .chip.active { background: var(--saffron); color: var(--olive-shadow); }
 
@@ -373,11 +373,20 @@ button { font-family: inherit; }
   .nav-links { gap: 14px; }
   .nav-links a:not(.home-link) { display: none; }
   .nav-inner .btn-primary { padding: 11px 18px; font-size: 10px; letter-spacing: 0.14em; }
-  .menu-header { padding: 70px 20px 60px; }
+  .menu-header { padding: 30px 20px 24px; }
+  .menu-header .eyebrow { margin-bottom: 10px; font-size: 10px; }
+  .menu-header h1 { font-size: clamp(28px, 8vw, 38px); margin-bottom: 10px; }
+  .menu-header p { display: none; }
+  .menu-header-cta { gap: 8px; }
+  .menu-header-cta .btn { padding: 11px 18px; font-size: 10px; letter-spacing: 0.12em; }
+  .menu-header-back { display: none; }
+  /* Full section index: every chip visible and tappable, no sideways scrolling */
+  .chip-nav { position: static; }
+  .chip-nav-inner { flex-wrap: wrap; justify-content: center; overflow-x: visible; gap: 7px; padding: 14px 12px; }
+  .chip { flex: 0 1 auto; padding: 13px 14px; font-size: 10.5px; letter-spacing: 0.1em; }
+  .menu-section { scroll-margin-top: 78px; }
   .featured { padding: 60px 20px 40px; }
   .menu-section, .policy, .menu-cta-strip { padding: 56px 20px; }
-  .chip-nav-inner { padding: 12px 16px; }
-  .chip { padding: 8px 14px; font-size: 10px; }
   .featured-meta { gap: 24px; flex-wrap: wrap; }
   .dish { grid-template-columns: 1fr; gap: 8px; }
   .dish-price { padding-left: 0; }
@@ -428,9 +437,9 @@ button { font-family: inherit; }
 <!-- PROMO BAR -->
 <div class="promo-bar" id="promoBar">
   <div class="promo-content">
-    <span><strong>The 2026 World Cup is live at Armila's.</strong> Every match on one of Hamilton's biggest screens</span>
+    <span><strong>New: Nihari Tacos are here.</strong> Slow-cooked nihari and melted cheese in a crisp golden shell</span>
     <span class="dot">◆</span>
-    <a href="index.html#worldcup">See the Schedule →</a>
+    <a href="#nihari-tacos">See the Dish →</a>
   </div>
   <button class="close" onclick="document.getElementById('promoBar').classList.add('hidden')" aria-label="Close">✕</button>
 </div>
@@ -455,7 +464,6 @@ button { font-family: inherit; }
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12l9-9 9 9M5 10v10a1 1 0 0 0 1 1h3v-7h6v7h3a1 1 0 0 0 1-1V10"/></svg>
         Home
       </a></li>
-      <li><a href="index.html#worldcup">World Cup</a></li>
       <li><a href="index.html#sports">Sports</a></li>
       <li><a href="index.html#events">Events</a></li>
       <li><a href="index.html#lounge">Lounge</a></li>
