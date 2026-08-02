@@ -3,12 +3,12 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://armilaslounge.com/</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://armilaslounge.com/assets/food-nihari-tacos.jpg</image:loc>
-      <image:title>Nihari Tacos — new at Armila's</image:title>
+      <image:title>Nihari Tacos, new at Armila's</image:title>
     </image:image>
     <image:image>
       <image:loc>https://armilaslounge.com/assets/food-grand-platter.jpg</image:loc>
@@ -16,7 +16,7 @@
     </image:image>
     <image:image>
       <image:loc>https://armilaslounge.com/assets/food-royal-qabli.jpg</image:loc>
-      <image:title>Royal Qabli Palaw — house signature</image:title>
+      <image:title>Royal Qabli Palaw, house signature</image:title>
     </image:image>
     <image:image>
       <image:loc>https://armilaslounge.com/assets/interior-wide.jpg</image:loc>
@@ -29,16 +29,22 @@
   </url>
   <url>
     <loc>https://armilaslounge.com/menu.html</loc>
-    <lastmod>2026-06-30</lastmod>
+    <lastmod>2026-07-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
       <image:loc>https://armilaslounge.com/assets/food-nihari-tacos.jpg</image:loc>
-      <image:title>Nihari Tacos — new at Armila's</image:title>
+      <image:title>Nihari Tacos, new at Armila's</image:title>
     </image:image>
     <image:image>
       <image:loc>https://armilaslounge.com/assets/food-royal-qabli.jpg</image:loc>
-      <image:title>Royal Qabli Palaw — $32</image:title>
+      <image:title>Royal Qabli Palaw</image:title>
     </image:image>
+  </url>
+  <url>
+    <loc>https://armilaslounge.com/catering.html</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
