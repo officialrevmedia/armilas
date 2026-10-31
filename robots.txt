@@ -1,13 +1,4 @@
 User-agent: *
 Allow: /
 
-# Block search bots from indexing build artifacts and meta directories
-Disallow: /api/
-Disallow: /.git/
-Disallow: /node_modules/
-
-# Sitemaps
 Sitemap: https://armilaslounge.com/sitemap.xml
-
-# Host (helps some bots prefer the canonical version)
-Host: armilaslounge.com
