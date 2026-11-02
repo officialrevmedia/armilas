@@ -151,15 +151,20 @@ var GA_MEASUREMENT_ID = '';
         .then(function (r) { return r.json().catch(function () { return {}; }).then(function (body) { return { ok: r.ok, body: body }; }); })
         .then(function (res) {
           var success = res.ok && res.body.success !== false && res.body.success !== 'false';
+          if (!success && /activat/i.test(res.body.message || '')) throw new Error('needs activation');
           if (!success) throw new Error('send failed');
           form.reset();
           statusBox.className = 'form-status ok';
           statusBox.textContent = 'Inquiry sent. We will reply by email or phone.';
           window.track('generate_lead', { form: 'catering_inquiry' });
         })
-        .catch(function () {
+        .catch(function (err) {
           statusBox.className = 'form-status err';
-          statusBox.innerHTML = 'Your inquiry did not send. Check your connection and try again, or call <a href="tel:+12896749692">(289) 674-9692</a>.';
+          if (err && err.message === 'needs activation') {
+            statusBox.innerHTML = 'Your inquiry did not send because this form is waiting to be activated. Please call <a href="tel:+12896749692">(289) 674-9692</a> for now.';
+          } else {
+            statusBox.innerHTML = 'Your inquiry did not send. Check your connection and try again, or call <a href="tel:+12896749692">(289) 674-9692</a>.';
+          }
         })
         .then(function () {
           button.removeAttribute('aria-busy');

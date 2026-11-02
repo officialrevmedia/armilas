@@ -329,3 +329,9 @@ blockquote footer { font-family: var(--sans); font-size: 0.875rem; margin-top: 6
 @media (max-width: 699px) { .page-head .btn-row .btn, .notfound .btn-row .btn { flex: 1 1 100%; } }
 a[href^="tel:"] { white-space: nowrap; }
 .notfound { padding-top: 64px; padding-bottom: 64px; }
+
+/* Reviews line and seasonal offer */
+.reviews { display: flex; align-items: center; gap: 10px; font-size: 0.9375rem; color: rgba(245, 239, 224, 0.86); }
+.stars { display: inline-flex; gap: 2px; color: var(--saffron-200); }
+.stars svg { width: 16px; height: 16px; }
+.offer { border-left: 3px solid var(--saffron); background: rgba(200, 147, 47, 0.14); padding: 10px 14px; font-weight: 600; color: var(--olive-900); max-width: 62ch; }
