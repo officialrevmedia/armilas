@@ -134,8 +134,25 @@ var GA_MEASUREMENT_ID = '';
     var fields = form.querySelectorAll('[data-label]');
     fields.forEach(function (f) { f.addEventListener('blur', function () { if (f.value) check(f); }); });
 
+    var mailtoFallback = function () {
+      var get = function (n) { var el = form.elements[n]; return el && el.value ? el.value : ''; };
+      var body = [
+        'Name: ' + get('name'),
+        'Phone: ' + get('phone'),
+        'Email: ' + get('email'),
+        'Type of event: ' + get('event_type'),
+        'Number of guests: ' + get('guests'),
+        'Event date: ' + get('event_date'),
+        'Package: ' + get('package'),
+        '',
+        get('message')
+      ].join('\n');
+      return 'mailto:info@armilaslounge.com?subject=' + encodeURIComponent('Catering inquiry') + '&body=' + encodeURIComponent(body);
+    };
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (button.getAttribute('aria-busy') === 'true') return;
       statusBox.className = 'form-status'; statusBox.textContent = '';
       var firstBad = null;
       fields.forEach(function (f) { if (!check(f) && !firstBad) firstBad = f; });
@@ -145,10 +162,28 @@ var GA_MEASUREMENT_ID = '';
       button.disabled = true;
       buttonText.textContent = 'Sending inquiry';
 
+      // FormSubmit's AJAX endpoint takes JSON. Give up after a set time so the button never hangs.
+      var timeoutMs = parseInt(form.getAttribute('data-timeout'), 10) || 20000;
+      var controller = 'AbortController' in window ? new AbortController() : null;
+      var slowTimer = setTimeout(function () { buttonText.textContent = 'Still sending'; }, Math.min(6000, timeoutMs / 2));
+      var killTimer = setTimeout(function () { if (controller) controller.abort(); }, timeoutMs);
+
+      var data = {};
+      new FormData(form).forEach(function (v, k) { data[k] = v; });
       var action = form.getAttribute('action');
       var url = action.indexOf('formsubmit.co/') > -1 && action.indexOf('/ajax/') === -1 ? action.replace('formsubmit.co/', 'formsubmit.co/ajax/') : action;
-      fetch(url, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-        .then(function (r) { return r.json().catch(function () { return {}; }).then(function (body) { return { ok: r.ok, body: body }; }); })
+
+      var timedOut = new Promise(function (resolve, reject) {
+        setTimeout(function () { reject(new Error('timeout')); }, timeoutMs + 500);
+      });
+      var request = fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+        signal: controller ? controller.signal : undefined
+      }).then(function (r) { return r.json().catch(function () { return {}; }).then(function (b) { return { ok: r.ok, body: b }; }); });
+
+      Promise.race([request, timedOut])
         .then(function (res) {
           var success = res.ok && res.body.success !== false && res.body.success !== 'false';
           if (!success && /activat/i.test(res.body.message || '')) throw new Error('needs activation');
@@ -159,14 +194,16 @@ var GA_MEASUREMENT_ID = '';
           window.track('generate_lead', { form: 'catering_inquiry' });
         })
         .catch(function (err) {
+          var reason = err && err.name === 'AbortError' ? 'timeout' : (err && err.message);
+          var why = reason === 'needs activation' ? 'Your inquiry did not send because this form is waiting to be activated.'
+            : reason === 'timeout' ? 'Your inquiry is taking too long to send.'
+            : 'Your inquiry did not send.';
           statusBox.className = 'form-status err';
-          if (err && err.message === 'needs activation') {
-            statusBox.innerHTML = 'Your inquiry did not send because this form is waiting to be activated. Please call <a href="tel:+12896749692">(289) 674-9692</a> for now.';
-          } else {
-            statusBox.innerHTML = 'Your inquiry did not send. Check your connection and try again, or call <a href="tel:+12896749692">(289) 674-9692</a>.';
-          }
+          statusBox.innerHTML = why + ' <a href="' + mailtoFallback() + '" data-fallback="email">Email it to us instead</a> (your details are filled in), or call <a href="tel:+12896749692">(289) 674-9692</a>.';
+          window.track('form_error', { form: 'catering_inquiry', reason: reason || 'unknown' });
         })
         .then(function () {
+          clearTimeout(slowTimer); clearTimeout(killTimer);
           button.removeAttribute('aria-busy');
           button.disabled = false;
           buttonText.textContent = idleLabel;
