@@ -363,7 +363,7 @@ a[href^="tel:"] { white-space: nowrap; }
 /* Highlighted menu row */
 .item-highlight { display: grid; grid-template-columns: 96px 1fr; gap: 16px; align-items: start; background: rgba(200, 147, 47, 0.13); border-left: 3px solid var(--saffron); padding: 14px 14px 14px 12px; margin: 8px 0; border-bottom: 0; }
 .item-highlight .ph { width: 96px; height: 96px; border-radius: 50%; }
-.spot-media img { object-position: 50% 78%; }
+.spot-media img { object-position: 50% 50%; }
 
 /* Skip rendering below-the-fold home sections until they are near the screen (faster first load) */
 .home main > section:nth-of-type(n+3) { content-visibility: auto; contain-intrinsic-size: auto 900px; }
@@ -392,7 +392,10 @@ a[href^="tel:"] { white-space: nowrap; }
 @media (min-width: 900px) {
   .spot { grid-template-columns: 6fr 5fr; }
   .spot-media .ph { height: auto; max-height: none; aspect-ratio: 5 / 4; }
-  .spot-media img { object-position: 50% 72%; }
   .spot-card { margin-left: -72px; }
 }
 @media (min-width: 600px) and (max-width: 899px) { .anatomy-photo { max-width: 460px; justify-self: center; } }
+
+/* Burani Kadoo: keep the whole dish visible and centred (no overlap on the photo) */
+@media (min-width: 900px) { .spot { gap: 40px; } .spot-card { margin-left: 0; } }
+@media (max-width: 899px) { .spot-card { margin: 0; padding: 28px 22px 24px; } .spot-inset { display: none; } }
