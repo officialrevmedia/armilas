@@ -106,6 +106,7 @@ var GA_MEASUREMENT_ID = '';
   /* Inquiry form: validation, loading state, success and error messages */
   var form = document.querySelector('form[data-inquiry]');
   if (form) {
+    form.noValidate = true; // this script validates; without it, the browser's own checks still run
     var statusBox = form.querySelector('.form-status');
     var button = form.querySelector('button[type="submit"]');
     var buttonText = button.querySelector('.label');
