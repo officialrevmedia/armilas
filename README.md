@@ -20,7 +20,7 @@ Static site for Armila's Restaurant & Lounge, hosted on GitHub Pages. Every page
 
 ## After the site is live
 
-1. **Inquiry form.** Submit one test inquiry on `/catering.html`. FormSubmit sends an activation email to info@armilaslounge.com. Click the link once and every later inquiry arrives by email.
+1. **Inquiry form.** Submit one test inquiry on `/catering.html`. FormSubmit sends an activation email to info@armilaslounge.com. Click the link in the newest activation email once and every later inquiry arrives by email. If FormSubmit is slow or down, the form stops waiting after 20 seconds and offers the visitor a prefilled email or the phone number instead.
 2. **Google Analytics.** Paste the GA4 Measurement ID (`G-...`) into the first line of `assets/js/site.js`. Nothing loads until it is set.
 3. **Search Console.** Add a Domain property for `armilaslounge.com`, verify with the DNS TXT record, then submit `https://armilaslounge.com/sitemap.xml`.
 4. **Google Business Profile.** Website `https://armilaslounge.com/`, menu link `https://armilaslounge.com/menu.html`.
