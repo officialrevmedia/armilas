@@ -25,6 +25,14 @@ Static site for Armila's Restaurant & Lounge, hosted on GitHub Pages. Every page
 3. **Search Console.** Add a Domain property for `armilaslounge.com`, verify with the DNS TXT record, then submit `https://armilaslounge.com/sitemap.xml`.
 4. **Google Business Profile.** Website `https://armilaslounge.com/`, menu link `https://armilaslounge.com/menu.html`.
 
+## Holiday catering offer
+
+The 10% catering offer appears in four places. Remove or change all four when the season ends:
+
+- the promo bar at the top of every page (`index.html`, `menu.html`, `catering.html`, `privacy.html`, `404.html`, the line with class `promo`)
+- the offer box on `catering.html` under the intro, plus the "before the 10% holiday discount" note above the packages table and the "with the 10% holiday discount included" line above the form
+- the offer box in the catering section of `index.html`
+
 ## Editing
 
 - **Prices and dishes** appear twice in `menu.html`: in the visible menu and in the `Menu` JSON-LD block in the `<head>`. Change both.
